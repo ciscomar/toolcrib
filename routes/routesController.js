@@ -13,11 +13,11 @@ const nodeMailer = require('../public/mail/conn')
 
 async function sendMail(to, material) {
 
-    const data = await ejs.renderFile(path.join(__dirname, `../public/mail/mail.ejs`), {  });
+    const data = await ejs.renderFile(path.join(__dirname, `../public/mail/mail.ejs`), { clave: material.clave_material, stock: material.stock, reorden: material.punto_reorden  });
     let mailOptions = {
         from: "noreply@tristone.com",
         to: `${to}`,
-        subject: `Material ${material.clave_material} En Punto de Reorden `,
+        subject: `ToolCrib Punto de Reorden #${material.clave_material} `,
         text: "",
         html: data,
     };

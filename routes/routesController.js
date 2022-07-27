@@ -13,7 +13,7 @@ const nodeMailer = require('../public/mail/conn')
 
 async function sendMail(to, material) {
 
-    const data = await ejs.renderFile(path.join(__dirname, `../public/mail/mail.ejs`), { clave: material.clave_material, stock: material.stock, reorden: material.punto_reorden  });
+    const data = await ejs.renderFile(path.join(__dirname, `../public/mail/mail.ejs`), { clave: material.clave_material, stock: material.stock, reorden: material.punto_reorden, descripcion: material.descripcion  });
     let mailOptions = {
         from: "noreply@tristone.com",
         to: `${to}`,

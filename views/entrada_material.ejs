@@ -1,0 +1,136 @@
+<%- include ("./static/header") %>
+  <%- include ("./static/sidebar") %>
+    <%- include ("./static/navbar") %>
+
+
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/mainMenu" class="text-info"><span
+                class="fas fa-arrow-circle-left text-info"></span> Menu</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Entrada Material</li>
+        </ol>
+      </nav>
+
+
+      <div class="col-lg-12 frame">
+
+        <div class="row">
+          <div class="col-lg-4"></div>
+
+          <div class="col-lg-4 d-md-block">
+            <div class="card">
+              <div class="card-header "><strong>Entrada de Material <span class="fas fa-arrow-left text-info mt-2" ></span></strong></div>
+              <div class="card-body">
+                <table class="table table-sm borderless">
+                  <tbody>
+                    <tr>
+                      <td><small><strong>ID:</strong></small></td>
+                      <td><small id="user_id">
+                          <%= user_id %>
+                        </small> </td>
+                    </tr>
+                    <tr>
+                      <td><small><strong>Nombre:</strong></small></td>
+                      <td><small id="user_name">
+                          <%= user_name %>
+                        </small> </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4"></div>
+          <div class="col-lg-4 text-center">
+            <form id="submitSerial">
+
+              <!-- <span class="fas fa-arrow-right text-info mt-2" style="font-size: 2rem;"></span> -->
+              <!-- <h4 class="text-center animate__animated animate__bounceIn d-lg-block mt-2" display: inline-block>
+                Salida de Material:</h4> -->
+
+
+              <div class="form-group">
+
+
+                <div class="alert alert-danger animate__flipOutX animate__animated role=" alert" id="alerta_prefijo">
+                  Error:
+                  Verificar escaneo
+                </div>
+                
+
+                <!-- <label for="serial_num">Requisitor: <i class="fas fa-barcode" style="font-size: 1rem;"></i></label>
+                <input type="text" class="form-control" name="requisitor" id="requisitor" aria-describedby="helpId"
+                  placeholder="" autocomplete="off"> -->
+                <label for="serial_num" class="mt-2">Material: <i class="fas fa-barcode"
+                    style="font-size: 1rem;"></i></label>
+                <input type="text" class="form-control" name="material" id="material" aria-describedby="helpId"
+                  placeholder="" autocomplete="off">
+                <label for="serial_num" class="mt-2">Descripcion: </label>
+                <input type="text" class="form-control" name="descripcion" id="descripcion" aria-describedby="helpId"
+                  placeholder="" autocomplete="off" readonly>
+                <label for="serial_num" class="mt-2">Cantidad: </label>
+                <input type="number" class="form-control" name="cantidad" id="cantidad" autocomplete="off" min="1">
+                <!-- <label for="serial_num" class="mt-2">Departamento: </label>
+                <select class="form-control text-center" id="departamento">
+                  <option value="">Seleccionar</option>
+
+                </select> -->
+                <small id="helpId" class="form-text text-muted"></small>
+              </div>
+            </form>
+   
+              <button type="button" class="btn btn-success mt-2 col-lg-12" id="btnCapturar"><span><span>Capturar</span></span>
+   
+
+
+
+          </div>
+          <div class="col-lg-4"></div>
+        </div>
+
+
+        <!-- <div class="row">
+    <div class="col-lg-4"></div>
+
+    <div class="col-lg-4">
+
+      <div class="card">
+        <div class="card-header ">
+          <div class="row">
+            <div class="col-9">
+              <strong>Seriales :</strong>
+              <small id="user_id"><%= user_id %></small>
+            </div>
+            <div class="col-2">
+              <button id="btn_transferVUL" type="button" class="btn btn-secondary btn-sm" disabled><small><span
+                    class="fa fa-external-link-alt"></span></small></button>
+            </div>
+          </div>
+        </div>
+        <div class="card-body bg-secondary text-center">
+          <div id="currentST">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4"></div>
+  </div> -->
+        <br><br><br><br>
+      </div>
+
+
+
+
+
+      <%- include ("./static/footer") %>
+        <script type="text/javascript" src="/js/functions/entrada_material.js"></script>
+
+        </body>
+
+        </html>

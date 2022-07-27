@@ -1,0 +1,143 @@
+<%- include ("./static/header") %>
+    <%- include ("./static/sidebar") %>
+        <%- include ("./static/navbar") %>
+
+
+        <div class="container-fluid">
+       <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 text-center">
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                        <br>
+                    <h3 class="box-title mb-3">Material</h3>
+                </div>
+
+
+                <div class="alert alert-danger animate__flipOutX animate__animated role=" alert" id="alerta_prefijo">
+                    Error:
+                    Verificar escaneo
+                  </div>
+                
+               
+                    <div class="box-body">
+                    
+                        <div class="row">
+                            <div class="form-group col-lg-4">
+                                <label for="Titulo">ID Material: </label>
+                                <input type="text" class="form-control" id="material"  name="material" onkeyup="this.value = this.value.toUpperCase();" autocomplete="off">
+                            </div>
+        
+                            <div class="form-group col-lg-4">
+                                <label for="Titulo">Categoria: </label>
+                                <select class="form-control" name="categoria" id="categoria">
+                                  </select>
+                               
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label for="Titulo">Concepto: </label>
+                                <select class="form-control" name="concepto" id="concepto">
+                                </select>
+                             
+                            </div>
+        
+                        </div>
+                        
+                        <div class="row">
+
+                            <div class="form-group col-lg-12">
+                                <label for="Titulo">Descripcion: </label>
+                                <input type="text" class="form-control" id="descripcion"  name="descripcion" onkeyup="this.value = this.value.toUpperCase();" autocomplete="off" >
+                            </div>
+                            
+                        </div>
+
+
+                        <div class="row">
+                          
+                            <div class="form-group col-lg-4">
+                                <label for="Titulo">Area: </label>
+                                <select class="form-control" name="area" id="area">
+                                </select>
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label for="Titulo">Rack: </label>
+                                <input type="text" class="form-control" id="rack"  name="rack" onkeyup="this.value = this.value.toUpperCase();" autocomplete="off" >
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label for="Titulo">Nivel: </label>
+                                <input type="text" class="form-control" id="nivel"  name="nivel" onkeyup="this.value = this.value.toUpperCase();" autocomplete="off" >
+                            </div>
+        
+                        </div>
+
+                        <div class="row">
+                           
+                            <div class="form-group col-lg-4">
+                                <label for="Titulo">Stock Minimo: </label>
+                                <input type="number" class="form-control" id="stockmin"  name="stockmin"  autocomplete="off" >
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label for="Titulo">Stock Maximo: </label>
+                                <input type="number" class="form-control" id="stockmax"  name="stockmax"  autocomplete="off" >
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label for="Titulo">Stock: </label>
+                                <input type="number" class="form-control" id="stock"  name="stock"  autocomplete="off" >
+                            </div>
+        
+                        </div>
+
+                        <div class="row">
+                           
+                            <div class="form-group col-lg-4">
+                                <label for="Titulo">Punto Reorden: </label>
+                                <input type="number" class="form-control" id="reorden"  name="reorden" onkeyup="this.value = this.value.toUpperCase();" autocomplete="off" >
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label for="Titulo">Unidad: </label>
+                                <select class="form-control" name="unidad" id="unidad">
+                                    <option value="PIEZA" selected>PIEZA</option>
+                                  </select>
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label for="Titulo">Precio: </label>
+                                <input type="text" class="form-control" id="precio"  name="precio" onkeyup="this.value = this.value.toUpperCase();" autocomplete="off" >
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            
+        
+                            <div class="form-group col-lg-4">
+                                <label for="Titulo">Critico: </label>
+                                <select class="form-control" name="critico" id="critico">
+                                    <option value="SI" selected>SI</option>
+                                    <option value="NO">NO</option>
+
+                                  </select>
+                            </div>
+        
+                        </div>
+
+
+
+
+
+
+                        <button type="button" class="btn btn-success mt-2 col-lg-12" id="btnCapturar"><span><span>Guardar</span></span>
+                            <button type="button" class="btn btn-danger mt-2 col-lg-12" id="btnEliminar" hidden><span><span>Eliminar </span></span>
+            
+            </div>
+            <!-- /.box -->
+        
+
+        </div>
+        
+       </div>
+
+    </div>
+
+
+        <%- include ("./static/footer") %>
+        <script type="text/javascript" src="/js/functions/material.js"></script>

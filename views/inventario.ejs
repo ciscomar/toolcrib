@@ -1,0 +1,135 @@
+<%- include ("./static/header") %>
+    <%- include ("./static/sidebar") %>
+        <%- include ("./static/navbar") %>
+
+
+
+            <div class="container-fluid">
+
+                <div class="row mt-5">
+                    <div class="col-4"></div>
+                    <div class="col-4">
+                        <img src="/img/TristoneLogo.png" class="img-logo rounded mx-auto d-block"
+                            alt="Tristone Flowtech">
+                        <h3 class="display-5 text-center  mt-1">Inventario Toolcrib</h3>
+                        <p class="lead text-center"></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="table-responsive ">
+                            <div class="containerTable mt-4">
+                                <div class="table table-responsive" id="tabled">
+                                    <table id="table"
+                                        class="table table-bordered table-striped table-sm hover text-center">
+                                        <thead class="thead-dark">
+                                            <th> Entrada/Salida</th>
+                                            <th> Material</th>
+                                            <th> Descripcion</th>
+                                            <th> Categoria </th>
+                                            <th> Rack</th>
+                                            <th> Nivel</th>
+                                            <th> Stock Actual</th>
+                                            <th> Stock Minimo</th>
+                                            <th> Punto Reorden</th>
+                                            <th> Critico</th>
+                                            <th> Estatus</th>
+
+                                        </thead>
+
+                                        <tbody>
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="modalfullScreen modal fade bd-example-modal-xl text-right" id="modalImpresion" tabindex="-1"
+            role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl text-right">
+              <div class="modal-content width='100%' text-right">
+                <div class="modal-body">
+    
+                  <div class="card">
+                    <div class="card-header text-center d-lg-block">
+                      <div class="row">
+    
+                        <div class="col-lg-11">
+                          <h4 class="card-mov"><span class="text-primary fas fa-clock-rotate-left"></span> Historial
+                          </h4>
+                        </div>
+                        <div class="col-lg-1">
+                          <button type="button" class="btn btn-danger" data-dismiss="modal" id="btnCerrarHistorial"><i
+                              class="icoSidebar fas fa-times"></i></button>
+                        </div>
+                      </div>
+    
+    
+    
+                    </div>
+    
+                    <div class="card-body">
+    
+                      <div class="table-responsive">
+                        <div class="containerTable">
+                          <!-- /.box-header -->
+                          <div class="table table-responsive" id="table">
+                            <table id="tableHistorial" class="table table-bordered table-striped table-sm ">
+                              <thead class="thead-dark text-center">
+    
+                                <th> Movimiento</th>
+                                <th> Entrego:</th>
+                                <th> Recibio:</th>
+                                <th> Solicitado Por:</th>
+                                <th> Cantidad</th>
+                                <th> Fecha</th>
+    
+    
+                              </thead>
+    
+                              <tbody class="text-center">
+    
+    
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+    
+    
+    
+                    </div>
+                  </div>
+    
+                </div>
+    
+                <div class="modal-footer">
+    
+                </div>
+                <input type="text" class="form-control" name="midplan" id="midplan" aria-describedby="helpId" value=""
+                  hidden>
+                </form>
+    
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+            <%- include ("./static/footer") %>
+                <script type="text/javascript" src="/js/functions/inventario.js"></script>

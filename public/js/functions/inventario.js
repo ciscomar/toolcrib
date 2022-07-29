@@ -109,13 +109,15 @@ function modalHistorial(material) {
             let salidas = result.data[1]
 
             entradas.forEach(element => {
-
+console.log(element);
                 tableHist.row.add([
                    
+
+                    element.id_entrada,
                     "Entrada",
                     element.entrego,
                     element.recibio,
-                    "TOOLCRIB",
+                    "MANTENIMIENTO",
                     element.cantidad,
                     element.fecha.substring(0, element.fecha.indexOf("T"))
 
@@ -125,9 +127,11 @@ function modalHistorial(material) {
 
 
             salidas.forEach(element2 => {
-
+                console.log(element2);
+              
                 tableHist.row.add([
                    
+                    element2.id_salida,
                     "Salida",
                     element2.entrego,
                     element2.recibio,

@@ -237,8 +237,7 @@ controller.insertSalida_POST = (req, res) => {
         Promise.all([insertSalida, updateStock, getMaterial, getCorreos])
             .then(result => {
 
-                console.log(getCorreos);
-
+             
                 if(getMaterial[0].stock <= getMaterial[0].punto_reorden){
 
                     for (let i = 0; i < getCorreos.length; i++) {

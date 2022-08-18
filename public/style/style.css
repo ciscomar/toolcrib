@@ -46,7 +46,7 @@
   margin-left: 0;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 400px) {
   #sidebar-wrapper {
     margin-left: 0;
   }

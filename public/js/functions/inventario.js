@@ -53,9 +53,9 @@ function materialTable() {
 
             data.forEach(element => {
                 let status=""
-                if(element.stock == 0){status=`<span class="icoSidebar fas fa-times text-danger"></span>`}
-               else if(element.stock >= element.punto_reorden){status=`<span class="icoSidebar fas fa-check text-success"></span>`}
-               else if(element.stock < element.punto_reorden){status=`<span class="icoSidebar fas fa-shopping-cart text-secondary"></span>`}
+                if(element.stock == 0){status=`<span class="icoSidebar fas fa-times text-danger"><span hidden>B</span></span>`}
+               else if(element.stock >= element.punto_reorden){status=`<span class="icoSidebar fas fa-check text-success"><span hidden>C</span></span>`}
+               else if(element.stock < element.punto_reorden){status=`<span class="icoSidebar fas fa-shopping-cart text-secondary"><span hidden>A</span></span>`}
                 
                 
 

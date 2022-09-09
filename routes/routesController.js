@@ -303,10 +303,19 @@ controller.insertMaterial_POST = (req, res) => {
 
     let data = req.body
 
+    if(req.body.materialID===""){
+        funcion.insertMaterialNew(data)
+        .then((result) => { res.json(result) })
+        .catch((err) => { console.error(err) })
+
+    }else{
+      
     funcion.insertMaterial(data)
     .then((result) => { res.json(result) })
     .catch((err) => { console.error(err) })
 }
+    }
+
 
 
 controller.deleteMaterial_POST = (req, res) => {

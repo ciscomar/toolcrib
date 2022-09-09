@@ -287,6 +287,55 @@ funcion.insertMaterial= (values) => {
 }
 
 
+
+
+
+funcion.insertMaterialNew= (values) => {
+
+
+    return new Promise((resolve, reject) => {
+            db(`
+        INSERT INTO materiales (
+            clave_material, 
+            descripcion, 
+            categoria, 
+            concepto, 
+            area, 
+            rack,
+            nivel_rack, 
+            stock_minimo, 
+            stock_maximo, 
+            stock, 
+            punto_reorden, 
+            unidad_medida, 
+            precio, 
+            critico,
+            status)
+    VALUES( 
+    '${values.material}', 
+    '${values.descripcion}', 
+    '${values.categoria}',
+    '${values.concepto}',
+    '${values.area}', 
+    '${values.rack}',
+    '${values.nivel}',  
+    '${values.stockmin}',
+    '${values.stockmax}', 
+    '${values.stock}',
+    '${values.reorden}', 
+    '${values.unidad}', 
+    '${values.precio}',
+    '${values.critico}',
+    'Activo')
+            `)
+                .then((result) => { resolve(result) })
+                .catch((error) => { reject(error) })
+
+    })
+
+}
+
+
 funcion.deleteMaterial = (data) => {
 
     return new Promise((resolve, reject) => {

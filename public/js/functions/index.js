@@ -7,10 +7,11 @@ $("#menu-toggle").click(function (e) {
 
 $(document).ready(function(){
   $('.hide_show').hide();  
-  $('.hide_show2').hide(); 
+  //$('.hide_show2').hide(); 
 })
 
 $('#click_hide_show').click(function(){
+  console.log("click");
   $('.hide_show').toggle(500);
 })
 

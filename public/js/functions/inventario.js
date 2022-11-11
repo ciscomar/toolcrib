@@ -1,11 +1,20 @@
 let btnCerrarHistorial = document.getElementById("btnCerrarHistorial")
-
+let btnExcel = document.getElementById("btnExcel")
+let fileDate = new Date()
 let table = $('#table').DataTable(
     {
         bFilter: true,
         bInfo: true,
         paging: true,
         pageLength: 15,  
+    buttons: [
+        {
+            extend: 'excelHtml5',
+            title: `Inventario Toolcrib ${fileDate.toLocaleString()}`,
+            filename: `Inventario Toolcrib ${fileDate.toLocaleString()}`,
+            className: "d-none"
+        }
+    ],
         
     }
 );
@@ -30,6 +39,12 @@ $(document).ready(function () {
     materialTable()
 
 
+})
+
+btnExcel.addEventListener("click", () => {
+    table.button('0').trigger()
+
+   
 })
 
 
@@ -128,6 +143,8 @@ function modalHistorial(material) {
 
             });
 
+
+            
 
             salidas.forEach(element2 => {
                 console.log(element2);

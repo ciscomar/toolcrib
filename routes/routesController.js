@@ -403,4 +403,51 @@ controller.deleteCorreo_POST = (req, res) => {
     .then((result) => { res.json(result) })
     .catch((err) => { console.error(err) })
 }
+
+
+controller.reporte_entrada_GET = (req, res) => {
+    user = req.connection.user
+    res.render('reporte_entradas.ejs', {
+        user
+    });
+}
+
+
+
+
+controller.tablaEntradas_POST = (req, res) => {
+
+    let desde = req.body.desde
+    let hasta = req.body.hasta
+
+
+    funcion.getEntradas(desde, hasta)
+        .then((result) => { res.json(result) })
+        .catch((err) => { console.error(err) })
+
+}
+
+
+controller.reporte_salida_GET = (req, res) => {
+    user = req.connection.user
+    res.render('reporte_salidas.ejs', {
+        user
+    });
+}
+
+
+
+
+controller.tablaSalidas_POST = (req, res) => {
+
+    let desde = req.body.desde
+    let hasta = req.body.hasta
+
+
+    funcion.getSalidas(desde, hasta)
+        .then((result) => { res.json(result) })
+        .catch((err) => { console.error(err) })
+
+}
+
 module.exports = controller;

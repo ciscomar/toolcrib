@@ -457,4 +457,53 @@ funcion.deleteCorreo = (id) => {
 }
 
 
+
+
+funcion.getEntradas = (desde, hasta) => {
+    return new Promise((resolve, reject) => {
+        db(`
+        SELECT 
+            *
+        FROM
+            entradas
+        INNER JOIN
+            materiales
+            ON entradas.id_material = materiales.id_material
+        WHERE
+            DATE(entradas.fecha)
+        BETWEEN 
+            '${desde}'
+        AND     
+            '${hasta}'
+            `)
+            .then((result) => { resolve(result) })
+            .catch((error) => { reject(error) })
+    })
+}
+
+
+
+funcion.getSalidas = (desde, hasta) => {
+    return new Promise((resolve, reject) => {
+        db(`
+        SELECT 
+            *
+        FROM
+            salidas
+        INNER JOIN
+            materiales
+            ON salidas.id_material = materiales.id_material
+        WHERE
+            DATE(salidas.fecha)
+        BETWEEN 
+            '${desde}'
+        AND     
+            '${hasta}'
+            `)
+            .then((result) => { resolve(result) })
+            .catch((error) => { reject(error) })
+    })
+}
+
+
 module.exports = funcion;

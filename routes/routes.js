@@ -30,5 +30,9 @@ router.post('/getCorreosTable',  routesController.getCorreosTable_POST);
 router.post('/getAllCorreos',  routesController.getAllCorreos_POST);
 router.post('/insertCorreo',  routesController.insertCorreo_POST);
 router.post('/deleteCorreo',  routesController.deleteCorreo_POST);
+router.get('/reporte_entrada',  routesController.reporte_entrada_GET);
+router.post('/tablaEntradas',  routesController.tablaEntradas_POST);
+router.get('/reporte_salida',  routesController.reporte_salida_GET);
+router.post('/tablaSalidas',  routesController.tablaSalidas_POST);
 
 module.exports = router;
